@@ -67,7 +67,7 @@ class PdfReport:
 
         webbrowser.open('file://' + os.path.realpath(self.filename))
 
-amount = int(input('Please provide the amount owed: '))
+amount = float(input('Please provide the amount owed: '))
 period = input('Please provide the period of the bill: ')
 
 bill = Bill(amount, period)
@@ -79,5 +79,5 @@ for i in range(number_of_flatmates):
     days = int(input('Please provide the number of days that {} spent in the flat: '.format(name)))
     flatmates.append(Flatmate(name, days))
 
-pdf_report = PdfReport('Report1.pdf')
+pdf_report = PdfReport(bill.period + ' Bill')
 pdf_report.generate(flatmates, bill)
