@@ -13,5 +13,5 @@ for i in range(number_of_flatmates):
     days = int(input('Please provide the number of days that {} spent in the flat: '.format(name)))
     flatmates.append(Flatmate(name, days))
 
-pdf_report = PdfReport(bill.period + ' Bill')
+pdf_report = PdfReport(bill.period + ' Bill.pdf')
 pdf_report.generate(flatmates, bill)
