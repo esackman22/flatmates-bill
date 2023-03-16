@@ -15,3 +15,6 @@ for i in range(number_of_flatmates):
 
 pdf_report = PdfReport(bill.period + ' Bill.pdf')
 pdf_report.generate(flatmates, bill)
+
+file_sharer = FileSharer(filepath=pdf_report.filename)
+print(file_sharer.share())
